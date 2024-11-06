@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Keamanan Siber</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">CyberSafe</div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="tips-pencegahan.html">Tips Pencegahan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+        <a href="laporkan-penipuan.html" class="cta-btn">Laporkan Penipuan</a>
+    </nav>
+
+    <!-- Full-width slider with single card -->
+    <section class="slider-section">
+        <button class="prev" onclick="slideLeft()">❮</button>
+        <div class="slider-container">
+            <div class="slide card slide1">
+                <h2>Waspada Penipuan Web Palsu yang Menyerupai Domain Resminya!</h2>
+                <p>Pelaku penipuan membuat situs atau website palsu dengan susunan karakter yang mirip dan sulit dibedakan dengan website resminya. Ketika korban ...</p>
+                <a href="https://kumparan.com/kumparantech/waspada-penipuan-web-palsu-yang-menyerupai-domain-resminya-217eushrgf2" class="read-more">Baca Selengkapnya</a>
+            </div>
+            <div class="slide card slide2">
+                <h2>Kasus Serangan Ransomware di Indonesia, BI Pernah Jadi Sasaran</h2>
+                <p> Di Indonesia setidaknya terdapat dua kasus serangan Ransomware yang cukup besar, salah satunya pernah menyasar Bank Indonesia.</p>
+                <a href="https://tekno.kompas.com/read/2023/05/16/14300037/kasus-serangan-ransomware-di-indonesia-bi-pernah-jadi-sasaran?page=all" class="read-more">Baca Selengkapnya</a>
+            </div>
+            <div class="slide card slide3">
+                <h2>Pelaku "Phishing" Bermodus APK via WhatsApp Ditangkap, Kuras Rp 1,4 M Tabungan Korban</h2>
+                <p>Modus kejahatan phishing di Sumatera Selatan dengan mengirimkan file APK lewat pesan Whatsapp kembali terjadi.</p>
+                <a href="https://regional.kompas.com/read/2023/10/30/183238278/pelaku-phishing-bermodus-apk-via-whatsapp-ditangkap-kuras-rp-14-m-tabungan?page=all" class="read-more">Baca Selengkapnya</a>
+            </div>
+        </div>
+        <button class="next" onclick="slideRight()">❯</button>
+    </section>
+
+    <script>
+        let scrollAmount = 0;
+        const container = document.querySelector('.slider-container');
+        
+        function slideLeft() {
+            scrollAmount -= window.innerWidth;
+            if (scrollAmount < 0) scrollAmount = (container.childElementCount - 1) * window.innerWidth;
+            container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }
+
+        function slideRight() {
+            scrollAmount += window.innerWidth;
+            if (scrollAmount >= container.childElementCount * window.innerWidth) scrollAmount = 0;
+            container.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

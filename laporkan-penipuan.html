@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporkan Penipuan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* forms design */
+    body {
+        font-family: Arial;
+        background-color: #e2b880;
+    }
+
+    input[type=text], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: block;
+        border: 1px solid #292929;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type=submit] {
+        width: 100%;
+        background-color: #04AA6D;
+        color: rgb(255, 255, 255);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.7s;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    div.container {
+        border-radius: 5px;
+        background-color: #e2b880;
+        padding: 50px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+            to {
+                opacity: 1; /* End opacity */
+                transform: translateY(0); /* End position */
+            }
+        }
+
+    /* navbar settings */
+    .navbar {
+        display: flex;
+        align-items: center; /* Center vertically */
+        padding: 25px 0; /* Add some padding */
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style-type: none; /* Remove default list styling */
+        padding: 0; /* Remove default padding */
+        margin: 0 auto; /* Center the ul */
+    }
+
+    .navbar ul li {
+        margin: 0 15px; /* Add space between menu items */
+    }
+
+    /* text settings */
+    .container h3 {
+        font-size: 25px;
+        color: white;
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .container p {
+        font-size: 18px;
+        color: white;
+        margin-bottom: 18px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    footer {
+        background-color: #e2b880;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+            to {
+                opacity: 1; /* End opacity */
+                transform: translateY(0); /* End position */
+            }
+        }
+</style>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar">
+        <div class="logo">CyberSafe</div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="tips-pencegahan.html">Tips Pencegahan</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bagian Laporkan Penipuan -->  
+    <div class="container">
+        <h3>Laporkan Penipuan Anda</h3>
+        <p>Laporkan jenis penipuan dengan mengisi form dibawah ini</p>
+
+        <form action="terima-kasih.html" method="get">
+            <label for="fname">Nama</label>
+            <input type="text" id="fname" name="firstname" placeholder="Nama Lengkap" required>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="text" id="phone" name="phone" placeholder="Masukkan nomor telepon yang aktif disini" required>
+
+            <label for="lname">Kronologi Penipuan</label>
+            <input type="text" id="lname" name="lastname" placeholder="Jelaskan kronologi penipuan dengan singkat..." required>
+
+            <label for="country">Jenis Penipuan</label>
+            <select id="country" name="country" required>
+                <option value="">--Pilih jenis penipuan--</option>
+                <option value="phishing">Phishing</option>
+                <option value="web-palsu">Web Palsu</option>
+                <option value="malware">Malware</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+      
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 CyberSafe | Melindungi Pengguna dari Ancaman Online</p>
+    </footer>
+
+</body>
+</html>

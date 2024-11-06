@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f0f0f;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('people4.png'); /* Path gambar */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Efek opacity 50% */
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #dba678;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navbar .cta-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative; /* Make the hero section relative */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    min-height: 80vh;
+    color: white;
+}
+
+.hero::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the hero section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('fakewebsite.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Set the desired opacity */
+    z-index: 0; /* Place it behind the content */
+}
+
+.hero-content {
+    position: relative; /* Make hero content relative so it's above the pseudo-element */
+    max-width: 600px;
+    z-index: 1; /* Ensure it's above the pseudo-element */
+}
+
+.hero-icon {
+    position: relative; /* Ensure the icon is also above the background */
+    z-index: 1; /* Set the z-index to be above the pseudo-element */
+}
+
+.hero-icon img {
+    width: 200px;
+}
+
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+    color: #ff6600;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.hero-content .btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.hero-icon img {
+    width: 200px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 50px;
+    background-color: #111111;
+}
+
+.features .feature {
+    max-width: 300px;
+    text-align: center;
+}
+
+.features .feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 19px;
+    
+}
+
+.features .feature p {
+    font-size: 1.1em;
+}
+
+.how-it-works {
+    padding: 80px 50px;
+    background-color: #333;
+    background-image: url('scam.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; /* Set the desired opacity */
+    z-index: 0; /* Place it behind the content */
+    position: relative;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.steps-container .step {
+    max-width: 300px;
+    text-align: left;
+}
+
+.steps-container .step h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.steps-container .step p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.cta {
+    padding: 80px 50px;
+    background-color: #ff6600;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta .btn-large {
+    background-color: white;
+    color: #ff6600;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.prevention {
+    position: relative; /* Make the prevention section relative */
+    padding: 320px 50px;
+    background-color: #222; /* Background color */
+    text-align: center;
+}
+
+.prevention::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely within the prevention section */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('solve.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    opacity: 0.5; /* Set the desired opacity */
+    z-index: 0; /* Place it behind the content */
+}
+
+.prevention h2 {
+    position: relative;
+    font-size: 2.5em;
+    margin-bottom: 90px;
+}
+
+.prevention .tip {
+     position: relative; /* Make text elements relative so they are above the pseudo-element */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.prevention .tip h3 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.prevention .tip p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+}
+
+/* Style untuk slider full-width */
+.slider-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.slide {
+    position: relative;
+    min-width: 100%;
+    padding: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #505050;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.slide::before  {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.slide > * {
+    position: relative;
+    z-index: 1;
+}
+
+.slide1::before { background-image: url('people1.jpg'); }
+.slide2::before { background-image: url('people2.jpg'); }
+.slide3::before { background-image: url('people3.jpg'); }
+
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    color: #007BFF;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #d4d4d4;
+}
+
+
+/* Mengatur gaya teks di dalam card */
+.slider-container .card h2 {
+    color: #ffffff; /* Hitam */
+    font-size: 24px; /* Ukuran font */
+    text-shadow: #000000;
+    text-align: center; /* Pusatkan teks */
+    margin-top: 0; /* Hilangkan jarak atas jika diperlukan */
+}
+
+.slider-container .card p {
+    color: #ffffff; /* Hitam */
+    font-size: 16px; /* Ukuran font */
+    text-align: center; /* Pusatkan teks */
+    margin: 10px 0; /* Atur jarak atas dan bawah */
+}
+
+
+.content {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.content h2 {
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.content p {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 35px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.hero-content,
+.features,
+.how-it-works,
+.prevention,
+.cta,
+.slider-section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* Latar belakang putih */
+            color: #000000; /* Teks hitam */
+            text-align: center; /* Mengatur teks menjadi rata tengah */
+            padding: 50px; /* Padding untuk konten */
+            margin: 0; /* Menghilangkan margin default */
+        }
+        
+        .container {
+            background-color: #ffffff; /* Warna latar belakang kontainer */
+            border-radius: 10px; /* Sudut membulat */
+            padding: 20px; /* Padding di dalam kontainer */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+            display: inline-block; /* Menjadikan kontainer lebih kecil */
+            opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1; /* End opacity */
+                transform: translateY(0); /* End position */
+            }
+        }
+
+        h1 {
+            font-size: 28px; /* Ukuran font untuk judul */
+            margin-bottom: 10px; /* Jarak bawah judul */
+        }
+
+        p {
+            font-size: 18px; /* Ukuran font untuk paragraf */
+            margin-bottom: 20px; /* Jarak bawah paragraf */
+        }
+
+        .btn {
+            display: inline-block; /* Menjadikan tombol dalam satu baris */
+            padding: 10px 20px; /* Padding tombol */
+            background-color: #04AA6D; /* Warna latar belakang tombol */
+            color: #ffffff; /* Warna teks tombol */
+            text-decoration: none; /* Menghapus garis bawah */
+            border-radius: 5px; /* Sudut membulat tombol */
+        }
+
+        .btn:hover {
+            background-color: #45a049; /* Warna tombol saat hover */
+        }
+
+        img {
+            width: 100px; /* Lebar gambar checklist */
+            margin-bottom: 20px; /* Jarak bawah gambar */
+        }
+
+        footer {
+            background-color: #ffffff;
+            opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s forwards;
+        }
+
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="checklist.png" alt="Checklist" /> <!-- Gambar checklist -->
+        <h1>Terima Kasih!</h1>
+        <p>Terima kasih sudah melaporkan penipuan ini, kami memproses dalam waktu 24 jam.</p>
+        <a href="index.html" class="btn">Kembali ke Beranda</a>
+    </div>
+    <footer>
+        <p>&copy; 2024 CyberSafe | Melindungi Pengguna dari Ancaman Online</p>
+    </footer>
+</body>
+</html>
